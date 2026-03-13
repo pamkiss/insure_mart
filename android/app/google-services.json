@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "34705185628",
+    "project_id": "insuremart-d134f",
+    "storage_bucket": "insuremart-d134f.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:34705185628:android:f554668535250d0dfc3f99",
+        "android_client_info": {
+          "package_name": "com.example.insure_mart"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "34705185628-greagu9kt57k71d0d9lju78f3qqs0ih2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.insure_mart",
+            "certificate_hash": "e063e0b0dba6e720898edb2b241ce1cddf1564fb"
+          }
+        },
+        {
+          "client_id": "34705185628-66jq28u9u8ujsdkcgii2mca0p1eok40a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDO14ebL4ObyM2fpiN4LGS93osMMnGytp4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "34705185628-66jq28u9u8ujsdkcgii2mca0p1eok40a.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "34705185628-08gactkfo3n3grtqonnldc9uarcctdkg.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.insureMart"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
