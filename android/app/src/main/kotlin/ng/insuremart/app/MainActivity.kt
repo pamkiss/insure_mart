@@ -1,4 +1,4 @@
-package com.example.insure_mart
+package ng.insuremart.app
 
 import io.flutter.embedding.android.FlutterActivity
 

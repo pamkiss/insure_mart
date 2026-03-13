@@ -14,8 +14,7 @@ class HelpScreen extends StatelessWidget {
         child: Column(
           children: [
             Padding(
-              padding:
-                  const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
               child: Row(
                 children: [
                   GestureDetector(
@@ -78,7 +77,8 @@ class HelpScreen extends StatelessWidget {
                                   icon: Icons.phone,
                                   label: 'Call Us',
                                   detail: '+234 800 123 4567',
-                                  onTap: () => openUrl(context,'tel:+2348001234567'),
+                                  onTap: () =>
+                                      openUrl(context, 'tel:+2348001234567'),
                                 ),
                               ),
                               const SizedBox(width: 12),
@@ -87,8 +87,8 @@ class HelpScreen extends StatelessWidget {
                                   icon: Icons.email,
                                   label: 'Email',
                                   detail: 'help@insuremart.ng',
-                                  onTap: () =>
-                                      openUrl(context,'mailto:help@insuremart.ng'),
+                                  onTap: () => openUrl(
+                                      context, 'mailto:help@insuremart.ng'),
                                 ),
                               ),
                             ],
@@ -123,8 +123,8 @@ class HelpScreen extends StatelessWidget {
                             color: const Color(0xFF1877F2),
                             label: 'Facebook',
                             handle: '@insuremart',
-                            onTap: () => openUrl(context,
-                                'https://www.facebook.com/insuremart'),
+                            onTap: () => openUrl(
+                                context, 'https://www.facebook.com/insuremart'),
                           ),
                           const SizedBox(height: 12),
                           _SocialRow(
@@ -133,7 +133,7 @@ class HelpScreen extends StatelessWidget {
                             label: 'X (Twitter)',
                             handle: '@insuremart',
                             onTap: () =>
-                                openUrl(context,'https://x.com/insuremart'),
+                                openUrl(context, 'https://x.com/insuremart'),
                           ),
                           const SizedBox(height: 12),
                           _SocialRow(
@@ -366,8 +366,7 @@ class _FaqItemState extends State<_FaqItem> {
             ),
             if (_expanded)
               Padding(
-                padding:
-                    const EdgeInsets.fromLTRB(16, 0, 16, 16),
+                padding: const EdgeInsets.fromLTRB(16, 0, 16, 16),
                 child: Text(
                   widget.faq['answer']!,
                   style: GoogleFonts.poppins(
