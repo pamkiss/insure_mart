@@ -45,6 +45,16 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
     }
   }
 
+  void _onFacebookLogin() async {
+    final auth = ref.read(authProvider);
+    final success = await auth.signInWithFacebook();
+    if (!mounted) return;
+    if (success) {
+      Navigator.pushNamedAndRemoveUntil(
+          context, AppRoutes.dashboard, (route) => false);
+    }
+  }
+
   void _onGoogleLogin() async {
     final auth = ref.read(authProvider);
     final success = await auth.signInWithGoogle();
@@ -168,13 +178,7 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                   _buildSocialButton(
                     icon: Icons.facebook,
                     color: AppColors.facebookBlue,
-                    onTap: () {
-                      ScaffoldMessenger.of(context).showSnackBar(
-                        const SnackBar(
-                          content: Text('Facebook login coming soon!'),
-                        ),
-                      );
-                    },
+                    onTap: _onFacebookLogin,
                   ),
                   const SizedBox(width: 16),
                   _buildSocialButton(

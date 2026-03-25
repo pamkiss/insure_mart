@@ -51,7 +51,7 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions android = FirebaseOptions(
     apiKey: 'AIzaSyDO14ebL4ObyM2fpiN4LGS93osMMnGytp4',
-    appId: '1:34705185628:android:f554668535250d0dfc3f99',
+    appId: '1:34705185628:android:95e8987fffd19bd3fc3f99',
     messagingSenderId: '34705185628',
     projectId: 'insuremart-d134f',
     storageBucket: 'insuremart-d134f.firebasestorage.app',

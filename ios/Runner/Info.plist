@@ -48,7 +48,24 @@
 		<string>tel</string>
 		<string>mailto</string>
 		<string>sms</string>
+		<string>fbapi</string>
+		<string>fb-messenger-share-api</string>
 	</array>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb926637140151064</string>
+			</array>
+		</dict>
+	</array>
+	<key>FacebookAppID</key>
+	<string>926637140151064</string>
+	<key>FacebookClientToken</key>
+	<string>3a63564195eac2691df5d0184757f272</string>
+	<key>FacebookDisplayName</key>
+	<string>InsureMart</string>
 	<key>CADisableMinimumFrameDurationOnPhone</key>
 	<true/>
 	<key>UIApplicationSupportsIndirectInputEvents</key>

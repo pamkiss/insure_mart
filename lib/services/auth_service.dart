@@ -1,4 +1,5 @@
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter_facebook_auth/flutter_facebook_auth.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 
 class AuthService {
@@ -77,8 +78,20 @@ class AuthService {
     return _auth.signInWithCredential(credential);
   }
 
+  // Facebook Auth
+  Future<UserCredential> signInWithFacebook() async {
+    final LoginResult result = await FacebookAuth.instance.login();
+    if (result.status != LoginStatus.success || result.accessToken == null) {
+      throw Exception('Facebook sign-in cancelled');
+    }
+    final credential =
+        FacebookAuthProvider.credential(result.accessToken!.tokenString);
+    return _auth.signInWithCredential(credential);
+  }
+
   // Sign Out
   Future<void> signOut() async {
+    await FacebookAuth.instance.logOut();
     await GoogleSignIn().signOut();
     await _auth.signOut();
   }

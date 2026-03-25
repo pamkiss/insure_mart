@@ -180,6 +180,38 @@ class AuthProvider extends ChangeNotifier {
     }
   }
 
+  // ---- Facebook Auth ----
+
+  Future<bool> signInWithFacebook() async {
+    _setLoading(true);
+    _clearError();
+
+    try {
+      final cred = await _authService.signInWithFacebook();
+      // Create profile if new user
+      final existing =
+          await _firestoreService.getUserProfile(cred.user!.uid);
+      if (existing == null) {
+        final user = UserModel(
+          uid: cred.user!.uid,
+          fullName: cred.user!.displayName,
+          email: cred.user!.email,
+          authMethod: 'facebook',
+          createdAt: DateTime.now(),
+        );
+        await _firestoreService.saveUserProfile(user);
+        await _firestoreService.initializeWallet(cred.user!.uid);
+        _userModel = user;
+      }
+      _setLoading(false);
+      return true;
+    } catch (e) {
+      _setError(e.toString());
+      _setLoading(false);
+      return false;
+    }
+  }
+
   // ---- Password Reset ----
 
   Future<bool> resetPassword(String email) async {

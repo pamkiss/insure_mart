@@ -57,6 +57,16 @@ class _SimpleSignUpScreenState extends ConsumerState<SimpleSignUpScreen> {
     }
   }
 
+  void _onFacebookSignUp() async {
+    final auth = ref.read(authProvider);
+    final success = await auth.signInWithFacebook();
+    if (!mounted) return;
+    if (success) {
+      Navigator.pushNamedAndRemoveUntil(
+          context, AppRoutes.dashboard, (route) => false);
+    }
+  }
+
   void _onGoogleSignUp() async {
     final auth = ref.read(authProvider);
     final success = await auth.signInWithGoogle();
@@ -207,13 +217,7 @@ class _SimpleSignUpScreenState extends ConsumerState<SimpleSignUpScreen> {
                     _buildSocialButton(
                       icon: Icons.facebook,
                       color: AppColors.facebookBlue,
-                      onTap: () {
-                        ScaffoldMessenger.of(context).showSnackBar(
-                          const SnackBar(
-                            content: Text('Facebook sign up coming soon!'),
-                          ),
-                        );
-                      },
+                      onTap: _onFacebookSignUp,
                     ),
                     const SizedBox(width: 16),
                     _buildSocialButton(

@@ -48,6 +48,42 @@
           ]
         }
       }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:34705185628:android:95e8987fffd19bd3fc3f99",
+        "android_client_info": {
+          "package_name": "ng.insuremart.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "34705185628-66jq28u9u8ujsdkcgii2mca0p1eok40a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDO14ebL4ObyM2fpiN4LGS93osMMnGytp4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "34705185628-66jq28u9u8ujsdkcgii2mca0p1eok40a.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "34705185628-08gactkfo3n3grtqonnldc9uarcctdkg.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.insureMart"
+              }
+            }
+          ]
+        }
+      }
     }
   ],
   "configuration_version": "1"
